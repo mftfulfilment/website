@@ -1,0 +1,6 @@
+{
+    "name": "intel/mailcode",
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}

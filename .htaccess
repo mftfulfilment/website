@@ -1,0 +1,14 @@
+#//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^https://mftfulfillmentcentre.com/[nc]
+RewriteRule ^(.*)$ http://www.https://mftfulfillmentcentre.com//$1 [r=301,nc]
+
+#//Custom 404 errors
+ErrorDocument 404 /404.html
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
+# <IfModule mod_rewrite.c> RewriteCond %{HTTPS} off [OR] RewriteCond %{HTTP_HOST} ^www\.mftfulfillmentcentre\.com [NC] RewriteRule (.*) https://mftfulfillmentcentre.com/$1 [L,R=301] </IfModule>
