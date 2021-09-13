@@ -50,7 +50,7 @@ $mail->Password = 'SG.7eqGrtLBR4uQ0_GY11bThA.ALMVWw8L_8LhgeHrHOmcspCTp9ZubiU_9FA
 //   $mail->AddAddress('samaksh@electrovese.com');
     // $mail->addAddress(' samaksh@electrovese.com','dsds');
     
-    $mail->addAddress('info@mftfulfillmentcentre.com','dsds');
+    $mail->addAddress('support@mftfulfillmentcentre.com','dsds');
     $mail->IsHTML(true);                                  // Set email format to HTML
 
     $mail->Subject = 'Query From User '. $name;
