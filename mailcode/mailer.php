@@ -2,17 +2,22 @@
 require "./vendor/autoload.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-if(isset($_POST['name'])) {
+if(isset($_POST['name']) && isset($_POST['email'])) {
 
-   
-    $to      = 'support@mftfulfillmentcentre.com';
-    $subject = 'the subject';
-    $message = 'hello';
-    $headers = 'From: mailer@noreply.mftfulfillmentcentre.com'       . "\r\n" .
-                 'Reply-To: info@mftfulfillmentcentre.com' . "\r\n" .
+    
+    $name =$_POST['name'];//req
+    $phone =$_POST['phone'];//req
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    $to      = 'nobody@example.com';
+    $subject = $subject;
+    $message = 'Phone: ' . $phone  . '<br/>' . 'email: ' . $email . '<br /><br />' . $message;
+    $headers = 'From: webmaster@example.com'       . "\r\n" .
+                 'Reply-To: ' . $email . "\r\n" .
                  'X-Mailer: PHP/' . phpversion();
 
     mail($to, $subject, $message, $headers);
-
 }
-header("Location: /");
+header("Location: /boom");
