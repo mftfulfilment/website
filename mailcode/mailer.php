@@ -17,7 +17,9 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
     $headers = 'From: webmaster@example.com'       . "\r\n" .
                  'Reply-To: ' . $email . "\r\n" .
                  'X-Mailer: PHP/' . phpversion();
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
     mail($to, $subject, $message, $headers);
 }
-header("Location: /boom");
+header("Location: /");
