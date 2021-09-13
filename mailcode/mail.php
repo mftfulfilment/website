@@ -63,6 +63,7 @@ $mail->Password = 'YEg-!cLaURf+';                              // SMTP password
     }
     echo 'Message has been sent';
 } catch (Exception $e) {
+        echo $e;
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 }
