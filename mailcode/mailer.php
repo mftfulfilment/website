@@ -8,7 +8,7 @@ if(isset($_POST['name'])) {
     // $sg = new \SendGrid($apiKey);
 
     $email = new \SendGrid\Mail\Mail();
-    $email->setFrom("test@example.com", "Example User");
+    $email->setFrom("support@mftfulfillmentcentre.com", "Example User");
     $email->setSubject("Sending with Twilio SendGrid is Fun");
     $email->addTo("support@mftfulfillmentcentre.com", "Example User");
     $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
@@ -26,4 +26,4 @@ if(isset($_POST['name'])) {
     }
 
 }
-header("Location: /boom");
+header("Location: /");
