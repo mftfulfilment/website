@@ -11,7 +11,7 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $to      = 'support@mftfulfillmentcentre.com';
+    $to      = 'info@mftfulfillmentcentre.com';
     $subject = $subject;
     $message = 'Phone: ' . $phone  . '<br/>' . 'email: ' . $email . '<br /><br />' . $message;
     $headers = 'From: webmaster@example.com'       . "\r\n" .
