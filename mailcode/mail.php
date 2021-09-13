@@ -23,13 +23,24 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
 
 // $mail->isSendmail();
     $mail->IsSMTP(true);                                           // Set mailer to use SMTP
+$mail->Host = 'smtp.sendgrid.net';                          // Specify main and backup server
+$mail->Port = 465;                                                 // Set the SMTP port
+$mail->SMTPAuth = true;                                            // Enable SMTP authentication
+$mail->Username = 'apikey';                // SMTP username
+$mail->Password = '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';                              // SMTP password
+    $mail->SMTPSecure = 'ssl';                                     // Enable encryption, 'ssl' also accepted
+
+        /*        
+            $mail->IsSMTP(true);                                           // Set mailer to use SMTP
 $mail->Host = 'premium50.web-hosting.com';                          // Specify main and backup server
 $mail->Port = 465;                                                 // Set the SMTP port
 $mail->SMTPAuth = true;                                            // Enable SMTP authentication
 $mail->Username = 'mailer@noreply.mftfulfillmentcentre.com';                // SMTP username
 $mail->Password = 'YEg-!cLaURf+';                              // SMTP password
-    $mail->SMTPSecure = 'ssl';                                     // Enable encryption, 'ssl' also accepted
-
+    $mail->SMTPSecure = 'ssl';   
+        */
+        
+        
 
     $mail->setFrom('mailer@noreply.mftfulfillmentcentre.com', 'noreply');
     // $mail->FromName = 'MFT Fulfillment Website Query';
