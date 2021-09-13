@@ -8,8 +8,8 @@ if(isset($_POST['name'])) {
     $to      = 'support@mftfulfillmentcentre.com';
     $subject = 'the subject';
     $message = 'hello';
-    $headers = 'From: webmaster@example.com'       . "\r\n" .
-                 'Reply-To: webmaster@example.com' . "\r\n" .
+    $headers = 'From: mailer@noreply.mftfulfillmentcentre.com'       . "\r\n" .
+                 'Reply-To: info@mftfulfillmentcentre.com' . "\r\n" .
                  'X-Mailer: PHP/' . phpversion();
 
     mail($to, $subject, $message, $headers);
