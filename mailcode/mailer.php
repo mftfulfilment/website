@@ -49,8 +49,8 @@ $mail->Password = 'YEg-!cLaURf+';                              // SMTP password
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
      if(!$mail->send()) {
-        echo 'Message could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        echo 'Message  not  sent.';
+        echo 'Mailer Error: ' . $mail;
         exit;
     }
     echo 'Message has been sent';
